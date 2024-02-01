@@ -14,6 +14,12 @@ export default defineConfig({
   integrations: [
     starlight({
       plugins: [starlightLinksValidator()],
+      social: {
+        github: 'https://github.com/G6Docs/G6Docs.github.io/'
+      },
+      editLink: {
+        baseUrl: 'https://github.com/G6Docs/G6Docs.github.io/edit/main/'
+      },
       title: 'G6 Docs',
       defaultLocale: 'root',
       locales: {

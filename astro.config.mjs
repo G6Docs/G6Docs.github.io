@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight'
 import starlightLinksValidator from 'starlight-links-validator'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import compress from 'astro-compress'
 import preact from '@astrojs/preact'
 
 // https://astro.build/config
@@ -44,6 +45,13 @@ export default defineConfig({
         './src/styles/headings.css',
         './src/styles/linking.css'
       ]
+    }),
+    compress({
+      CSS: true,
+      HTML: true,
+      Image: false,
+      JavaScript: true,
+      SVG: true
     }),
     preact()
   ],

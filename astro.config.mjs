@@ -44,7 +44,10 @@ export default defineConfig({
         './node_modules/pretendard/dist/web/static/pretendard.css',
         './src/styles/headings.css',
         './src/styles/linking.css'
-      ]
+      ],
+      components: {
+        Head: './src/components/Head.astro'
+      }
     }),
     compress({
       CSS: true,

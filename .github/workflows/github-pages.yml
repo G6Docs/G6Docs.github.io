@@ -3,6 +3,10 @@ name: Deploy G6Docs.github.io
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**/Dockerfile'
+      - 'README.md'
+      - '.github/**'
   workflow_dispatch:
 
 permissions:
@@ -20,7 +24,7 @@ jobs:
     steps:
       - name: Checkout Github
         uses: actions/checkout@v3
-        
+
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:

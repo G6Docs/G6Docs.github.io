@@ -50,7 +50,7 @@ jobs:
         run: pnpm install
 
       - name: build
-        run: build install
+        run: pnpm build
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1

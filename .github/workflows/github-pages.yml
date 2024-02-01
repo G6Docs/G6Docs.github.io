@@ -3,10 +3,6 @@ name: Deploy G6Docs.github.io
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - '**/Dockerfile'
-      - 'README.md'
-      - '.github/**'
   workflow_dispatch:
 
 permissions:

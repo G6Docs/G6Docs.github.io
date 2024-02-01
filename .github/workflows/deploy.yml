@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy Demo to DEMO
 on:
   pull_request:
     branches: main
@@ -26,13 +26,35 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          
-      - name: Build step
-        run: "npm install -g pnpm && pnpm install && pnpm build"
-        
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: build
+        run: build install
+
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "g6docs"
-          entrypoint: "https://deno.land/std@0.188.0/http/file_server.ts"
-          root: "dist"
+          project: 'g6docs'
+          entrypoint: 'https://deno.land/std@0.188.0/http/file_server.ts'
+          root: 'dist'

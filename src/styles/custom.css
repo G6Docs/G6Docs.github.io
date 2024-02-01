@@ -1,0 +1,95 @@
+:root {
+  --sl-font: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+
+  /* --sl-font-mono: 'D2Coding', ui-monospace, 'Noto Mono', SFMono-Regular, Menlo,
+      Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
+
+  --sl-font-mono: : 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+
+  --sl-line-height-headings: 1.4;
+
+  --sl-text-xs: 0.975rem;
+  --sl-text-sm: 1.05rem;
+  --sl-text-base: 1.23rem;
+  --sl-text-lg: 1.3rem;
+  --sl-text-xl: 1.4rem;
+  --sl-text-2xl: 1.7rem;
+  --sl-text-3xl: 1.9rem;
+  --sl-text-4xl: 2.1rem;
+  --sl-text-5xl: 2.3rem;
+  --sl-text-6xl: 4rem;
+
+  --sl-nav-height: 3.5rem;
+  --sl-nav-pad-x: 1rem;
+  --sl-nav-pad-y: 0.75rem;
+  --sl-mobile-toc-height: 3rem;
+  --sl-sidebar-width: 18.75rem;
+  --sl-sidebar-pad-x: 1rem;
+  --sl-content-width: 60rem;
+  --sl-content-pad-x: 1.75rem;
+  --sl-menu-button-size: 2rem;
+  --sl-nav-gap: var(--sl-content-pad-x);
+  --sl-outline-offset-inside: -0.1875rem;
+
+  --sl-color-accent-low: #303340;
+  --sl-color-accent: #161f38;
+  --sl-color-accent-high: #f9f9fa;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #e8eefc;
+  --sl-color-gray-2: #bbc2d3;
+  --sl-color-gray-3: #a6abbd;
+  --sl-color-gray-4: #4c5774;
+  --sl-color-gray-5: #2d3752;
+  --sl-color-gray-6: #1c263f;
+  --sl-color-black: #131824;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #f9f9fa;
+  --sl-color-accent: #161f38;
+  --sl-color-accent-high: #303340;
+  --sl-color-white: #131824;
+  --sl-color-gray-1: #1c263f;
+  --sl-color-gray-2: #2d3752;
+  --sl-color-gray-3: #4a536f;
+  --sl-color-gray-4: #7e8baa;
+  --sl-color-gray-5: #bbc2d3;
+  --sl-color-gray-6: #e8eefc;
+  --sl-color-gray-7: #f3f6fd;
+  --sl-color-black: #ffffff;
+}
+
+.sl-markdown-content
+  :not(a, strong, em, del, span, input, code)
+  + :not(a, strong, em, del, span, input, code, :where(.not-content *)) {
+  margin-top: 1.4rem;
+}
+
+.sl-markdown-content
+  :is(img, picture, video, canvas, svg, iframe):not(:where(.not-content *)) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sl-markdown-content
+  :not(a, strong, em, del, span, input, code)
+  + p:not(:where(.not-content *)),
+.sl-markdown-content
+  :not(a, strong, em, del, span, input, code)
+  + ol:not(:where(.not-content *)) {
+  font-size: 1.125rem;
+}
+
+.site-title {
+  gap: 0.75rem;
+  font-family: 'Pretendard Variable', Pretendard;
+}

@@ -1,0 +1,21 @@
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a {
+  position: relative;
+  color: var(--sl-color-white);
+  text-decoration: none;
+}
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a::before {
+  content: '#';
+  visibility: hidden;
+  position: absolute;
+  left: -1.7rem;
+  top: 0;
+}
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a:hover::before {
+  visibility: visible;
+}
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,38 @@
+name: Deploy
+on:
+  pull_request:
+    branches: main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy Demo to DEMO
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          
+      - name: Build step
+        run: "npm install -g pnpm && pnpm install && pnpm build"
+        
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: "g6docs"
+          entrypoint: "https://deno.land/std@0.188.0/http/file_server.ts"
+          root: "dist"

@@ -1,0 +1,4 @@
+functions/*
+dist/*
+pnpm-lock.yaml
+staticwebapp.config.json

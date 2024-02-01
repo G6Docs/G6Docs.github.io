@@ -1,0 +1,14 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "types": ["@cloudflare/workers-types"],
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "strict": true,
+    "jsxImportSource": "preact"
+  },
+  "exclude": ["api/functions/**/*", "dist/**", "api/dist/**"]
+}

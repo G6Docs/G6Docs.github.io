@@ -7,7 +7,7 @@ import preact from '@astrojs/preact'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://g6docs.github.io',
+  site: 'https://g6doc.pages.dev',
   prefetch: {
     prefetchAll: true
   },

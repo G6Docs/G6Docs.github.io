@@ -10,3 +10,6 @@ https://:g6docs.pages.dev/*
 /api/*
     X-Robots-Tag: noindex
     Cache-Control: stale-while-revalidate=60, stale-if-error=120, proxy-revalidate, private, no-store, no-cache, no-transform, must-revalidate, max-age=0
+
+/cdn-cgi/*
+    X-Robots-Tag: noindex

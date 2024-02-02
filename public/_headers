@@ -8,4 +8,5 @@ https://:g6docs.pages.dev/*
     Cache-Control: public, max-age=604800, immutable
 
 /api/*
+    X-Robots-Tag: noindex
     Cache-Control: stale-while-revalidate=60, stale-if-error=120, proxy-revalidate, private, no-store, no-cache, no-transform, must-revalidate, max-age=0

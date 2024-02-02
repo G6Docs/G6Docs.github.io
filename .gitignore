@@ -37,3 +37,4 @@ examples/**/.astro/
 examples/**/env.d.ts
 
 functions/
+.astro

@@ -3,12 +3,40 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": ["esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["@cloudflare/workers-types"],
     "jsx": "react-jsx",
-    "skipLibCheck": true,
     "strict": true,
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "moduleResolution": "bundler",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true
   },
-  "exclude": ["api/functions/**/*", "dist/**", "api/dist/**"]
+  "exclude": ["api/functions/**/*", "dist/**", "api/dist/**", "functions"],
+  "plugins": [
+    {
+      "name": "@astrojs/ts-plugin"
+    }
+  ]
 }

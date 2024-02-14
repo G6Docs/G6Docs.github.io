@@ -44,6 +44,6 @@
     "rehype-autolink-headings": "^7.1.0",
     "remark-toc": "^9.0.0",
     "sharp": "^0.33.2",
-    "starlight-links-validator": "^0.5.2"
+    "starlight-links-validator": "^0.5.3"
   }
 }

@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^4.2.1
     version: 4.2.1
   '@astrojs/node':
-    specifier: ^8.2.0
-    version: 8.2.0(astro@4.3.7)
+    specifier: ^8.2.1
+    version: 8.2.1(astro@4.3.7)
   '@astrojs/preact':
     specifier: ^3.1.0
     version: 3.1.0(@babel/core@7.23.9)(preact@10.19.4)(vite@5.1.2)
@@ -240,8 +240,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.0(astro@4.3.7):
-    resolution: {integrity: sha512-keQIPvdx8hquG+KnWoJp7io/GoczBEJer9X8WzPHK2fnVRXYDKGzXWZw3Dbg0ZhXJreVV3xzniN7nr6e7hgDXg==}
+  /@astrojs/node@8.2.1(astro@4.3.7):
+    resolution: {integrity: sha512-n3VWx34V5te6g/Jm2rbpXzTdpCW86CmstaGbsPutOs6VaXvvWwk+ZibA/bFl7XgNpxqQ5d6Pqacnsn+xkZ/Kag==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:

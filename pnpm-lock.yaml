@@ -23,8 +23,8 @@ dependencies:
 
 devDependencies:
   '@astrojs/cloudflare':
-    specifier: ^9.0.0
-    version: 9.0.0(astro@4.3.7)
+    specifier: ^9.0.2
+    version: 9.0.2(astro@4.3.7)
   '@astrojs/markdown-remark':
     specifier: ^4.2.1
     version: 4.2.1
@@ -128,8 +128,8 @@ packages:
       - prettier-plugin-astro
     dev: false
 
-  /@astrojs/cloudflare@9.0.0(astro@4.3.7):
-    resolution: {integrity: sha512-EkUUCCGp35O0pPgRIBuahbz/eQlnOPoCM4aszFMqIWcjfOJMXMlXLma5MEHFDdNOdLdPb53LmuWBVIjDOvsUfQ==}
+  /@astrojs/cloudflare@9.0.2(astro@4.3.7):
+    resolution: {integrity: sha512-5nJbI4+HW7SJYBkLIfhKaOA+D1rkxjcXB7Z3uIYHIK98Cqf7KYbmVM5o7f66A0OKWmcEI9EJXlle7IPFvKQUuQ==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:

@@ -30,7 +30,7 @@
     "@astrojs/ts-plugin": "^1.5.2",
     "@cloudflare/workers-types": "^4.20240208.0",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "astro-compress": "^2.2.10",
     "astro-og-canvas": "^0.4.2",
     "canvaskit-wasm": "^0.39.1",

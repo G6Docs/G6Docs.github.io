@@ -15,7 +15,7 @@
     "t1": "prettier -w . && eslint && astro check && astro build"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.4",
+    "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.1.1",
     "@astrojs/starlight": "^0.18.1",
     "astro": "^4.3.7",
